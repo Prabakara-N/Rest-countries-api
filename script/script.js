@@ -64,7 +64,6 @@ function setTime() {
 // event listneres
 btn.addEventListener("click", () => {
   if (inputCountryEl.value === "") {
-    outputContainerEl.style.display = "none";
     alert("Please Enter A Valid Country Name");
   } else {
     outputContainerEl.style.display = "none";
@@ -77,7 +76,6 @@ btn.addEventListener("click", () => {
 inputCountryEl.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
     if (inputCountryEl.value === "") {
-      outputContainerEl.style.display = "none";
       alert("Please Enter A Valid Country Name");
     } else {
       outputContainerEl.style.display = "none";
