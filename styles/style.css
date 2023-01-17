@@ -334,7 +334,7 @@ span {
 
 @media screen and (max-width: 620px) {
   main {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem 1.5rem;
     width: 95%;
     margin: 1rem auto;
   }
