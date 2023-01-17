@@ -22,7 +22,6 @@ function getResult() {
   fetch(finalURL)
     .then((resp) => {
       if (!resp.ok) {
-        inputCountryEl.value = "";
         alert("Country Not Found...SORRY!");
         throw new Error("No Country found !!!");
       }
@@ -34,15 +33,30 @@ function getResult() {
 // to display the output
 function displayResults(country) {
   // innerHTML
+  // flag
   imgEl.innerHTML = `<img src=${country[0].flags.png} alt="flag">`;
+
+  // country name
   countryNameEl.innerText = `${country[0].name.common}`;
+
+  // capital city
   capitalEl.innerHTML = `<span>Capital :</span> ${country[0].capital[0]}`;
+
+  // region
   continentEl.innerHTML = `<span>Continent :</span> ${country[0].continents[0]}`;
+
+  // population
   populationEl.innerHTML = `<span>Population :</span> ${country[0].population}`;
+
+  // timezone
   timezoneEl.innerHTML = `<span>Timezone :</span> ${country[0].timezones[0]}`;
+
+  // currency
   currencyEl.innerHTML = `<span>Currency :</span>${
     country[0].currencies[Object.keys(country[0].currencies)].name
   } - ${country[0].currencies[Object.keys(country[0].currencies)].symbol}`;
+
+  // language
   languageEl.innerHTML = `<span>Common Languages :</span> ${Object.values(
     country[0].languages
   )
@@ -50,6 +64,7 @@ function displayResults(country) {
     .split(",")
     .join(", ")}`;
 
+  // to make card visible after getting all output
   outputContainerEl.style.display = "block";
 }
 

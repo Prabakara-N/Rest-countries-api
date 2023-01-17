@@ -71,6 +71,7 @@ main {
 
 input {
   width: 400px;
+  text-transform: capitalize;
   border: none;
   border-radius: 5px;
   padding-left: 1rem;
