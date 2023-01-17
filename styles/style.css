@@ -57,7 +57,7 @@ main {
 
 /* input container */
 .main-bg {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .earth {
@@ -79,6 +79,7 @@ input {
   color: aliceblue;
   font-weight: 600;
   font-size: 1.25rem;
+  cursor: pointer;
 }
 
 ::placeholder {
