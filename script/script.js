@@ -22,9 +22,9 @@ function getResult() {
   fetch(finalURL)
     .then((resp) => {
       if (!resp.ok) {
-        outputContainerEl.style.display = "none";
-        alert("Country Not Found...SORRY!");
         inputCountryEl.value = "";
+        alert("Country Not Found...SORRY!");
+        throw new Error("No Country found !!!");
       }
       return resp.json();
     })
@@ -49,14 +49,15 @@ function displayResults(country) {
     .toString()
     .split(",")
     .join(", ")}`;
+
+  outputContainerEl.style.display = "block";
 }
 
 // setTimeout(getResult, 2000);
-function time() {
+function setTime() {
   setTimeout(() => {
     loader.style.display = "none";
     getResult();
-    outputContainerEl.style.display = "block";
   }, 2000);
 }
 
@@ -68,7 +69,7 @@ btn.addEventListener("click", () => {
   } else {
     outputContainerEl.style.display = "none";
     loader.style.display = "block";
-    time();
+    setTime();
   }
 });
 
@@ -81,7 +82,7 @@ inputCountryEl.addEventListener("keyup", (e) => {
     } else {
       outputContainerEl.style.display = "none";
       loader.style.display = "block";
-      time();
+      setTime();
     }
   }
 });
