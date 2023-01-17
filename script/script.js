@@ -102,6 +102,5 @@ inputCountryEl.addEventListener("keyup", (e) => {
 
 // loading anime
 window.addEventListener("load", () => {
-  const loader = document.querySelector(".pulse");
   loader.style.display = "none";
 });
