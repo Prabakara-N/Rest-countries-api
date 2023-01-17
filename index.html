@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Custom Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+
+    <title>Rest Country API</title>
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--normalize CSS -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <!-- main container -->
+<main>
+  <!-- img -->
+  <div class="main-bg">
+    <img src="./images/earth.jpg" alt="earth" class="earth">
+  </div>
+    <!-- input container -->
+    <div class="input-container">
+      <!-- input -->
+      <input type="text" id="country-input" placeholder="Enter A Country Name" />
+      <!-- btn -->
+      <button class="glow-on-hover" id="btn">
+        Search <i class="fa-solid fa-earth-americas"></i></i>
+      </button>
+    </div>
+
+    <!-- loading -->
+    <div class="pulse"></div>
+
+    <!-- output container -->
+    <div class="output-container">
+      <!-- flag -->
+<div class="flag-img">
+  <img src="" alt="">
+</div>
+<h2 class="Country">INDIA</h2>
+<p class="Capital"> <span>Capital :</span> New Delhi</p>
+<p class="Continent"> <span>Continent :</span> Asia</p>
+<p class="Population"> <span>Population :</span> 1380004585</p>
+<p class="time"> <span>Timezone :</span> UTC+05:30</p>
+<p class="Currency"> <span>Currency :</span> Indian rupee(₹) - INR</p>
+<p class="languages"> <span>Common Languages :</span> Tamil , English , Hindi</p>
+    </div>
+  </main>
+
+      <!-- social icons -->
+      <div class="social-icon">
+        <a href="https://www.instagram.com/swag__55__/"
+          ><i class="fa-brands fa-instagram icons"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/prabakaran-m-105289219/"
+          ><i class="fa-brands fa-linkedin icons"></i
+        ></a>
+        <a href="https://github.com/Prabakara-N"
+          ><i class="fa-brands fa-github icons"></i
+        ></a>
+      </div>
+    <!-- Custom JavaScript -->
+    <script src="./script/script.js"></script>
+  </body>
+</html>
